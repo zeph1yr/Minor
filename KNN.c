@@ -1,7 +1,5 @@
-#include <stdio.h>
+ #include <stdio.h>
 #include <stdlib.h>
-
-// Testcase - 23 1 0 1 1 1 0 0 1 1 0 0 1 1 0 0
 
 int K, x1, x2, x3, x4, x5, x6, x7, x8, x9, x10, x11, x12, x13, x14, x15, x16 ;
 
@@ -26,16 +24,14 @@ void KNN()
     for(int i = 0 ; i< n ; i++)
     {
         if(Rank[i] < 4 )
-        {
             printf("%d ",Classification[i]);
 
             if(Classification[i])flag++;
             else flag--;
-        }
     }
     printf("\n\n");
 
-    if(flag>0) printf("The patient may have diabetes");
+    if(flag>=0) printf("The patient may have diabetes");
     else printf("The patient may NOT have diabetes");
 
 
@@ -50,7 +46,7 @@ int main()
         &x8, &x9, &x10, &x11, & x12, &x13, &x14, &x15, &x16
           );
 
-    freopen("D:/input.txt","r",stdin);
+    freopen("input.txt","r",stdin);
 
     scanf("%d", &n);
     for( int i = 0 ; i < n; i++ )
@@ -78,7 +74,7 @@ int main()
      printf("distance\n");
     for(int i = 0 ; i<n ; i++)
     {
-        distance[i]=(x1=Age[i])*(x1-Age[i])+(x2-Gender[i])*(x2-Gender[i])+(x3-Polyuria[i])*(x3-Polyuria[i])+(x4-Polydipsia[i])*(x4-Polydipsia[i])+(x5-WeightLoss[i])*(x5-WeightLoss[i])+(x6-Weakness[i])*(x6-Weakness[i])+(x7-Polyphagia[i])*(x7-Polyphagia[i])+(x8-GenitalThrush[i])*(x8-GenitalThrush[i])+(x9-VisualBlurring[i])*(x9-VisualBlurring[i])+(x10-Itching[i])*(x10-Itching[i])+(x11-Irritability[i])*(x11-Irritability[i])+(x12-DelayedHealing[i])*(x12-DelayedHealing[i])+(x13-PartialParesis[i])*(x13-PartialParesis[i])+(x14-MuscleStiffness[i])*(x14-MuscleStiffness[i])+(x15-Alopecia[i])*(x15-Alopecia[i])+(x16-Obesity[i])*(x16-Obesity[i]);
+        distance[i]=(x1-Age[i])*(x1-Age[i])+(x2-Gender[i])*(x2-Gender[i])+(x3-Polyuria[i])*(x3-Polyuria[i])+(x4-Polydipsia[i])*(x4-Polydipsia[i])+(x5-WeightLoss[i])*(x5-WeightLoss[i])+(x6-Weakness[i])*(x6-Weakness[i])+(x7-Polyphagia[i])*(x7-Polyphagia[i])+(x8-GenitalThrush[i])*(x8-GenitalThrush[i])+(x9-VisualBlurring[i])*(x9-VisualBlurring[i])+(x10-Itching[i])*(x10-Itching[i])+(x11-Irritability[i])*(x11-Irritability[i])+(x12-DelayedHealing[i])*(x12-DelayedHealing[i])+(x13-PartialParesis[i])*(x13-PartialParesis[i])+(x14-MuscleStiffness[i])*(x14-MuscleStiffness[i])+(x15-Alopecia[i])*(x15-Alopecia[i])+(x16-Obesity[i])*(x16-Obesity[i]);
         distance1[i] = distance[i];
         printf("%d ",distance1[i]);
     }
