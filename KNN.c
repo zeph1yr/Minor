@@ -1,4 +1,4 @@
- #include <stdio.h>
+#include <stdio.h>
 #include <stdlib.h>
 
 int K, x1, x2, x3, x4, x5, x6, x7, x8, x9, x10, x11, x12, x13, x14, x15, x16 ;
@@ -24,12 +24,14 @@ void KNN()
     for(int i = 0 ; i< n ; i++)
     {
         if(Rank[i] < 4 )
+        {
             printf("%d ",Classification[i]);
 
             if(Classification[i])flag++;
             else flag--;
+        }
     }
-    printf("\n\n");
+    printf("\n \n");
 
     if(flag>=0) printf("The patient may have diabetes");
     else printf("The patient may NOT have diabetes");
@@ -102,4 +104,3 @@ int main()
 
     return(0);
 }
-
